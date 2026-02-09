@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>LandedClean — AI.com Name Vault</title>
+  <title>LandedClean - AI.com Name Vault</title>
   <meta name="description" content="A clean, premium landing page showcasing AI.com name ideas." />
 
   <style>
@@ -13,6 +13,7 @@
       --tan-2: #E7D7C1;   /* soft tan */
       --tan-3: #D2B48C;   /* classic tan */
       --tan-4: #B8926A;   /* deeper tan */
+      --tan-hex: #D2B48C; /* section stroke */
       --ink:   #1B1714;   /* dark */
       --ink-2: rgba(27,23,20,.72);
 
@@ -65,7 +66,7 @@
     }
 
     .wrap{
-      max-width: 1100px;
+      max-width: 1180px;
       margin: 0 auto;
       padding: 26px 20px 70px;
     }
@@ -86,7 +87,8 @@
       color: var(--tan-1);
     }
     .mark{
-      width: 38px; height: 38px;
+      width: 38px;
+      height: 38px;
       border-radius: 12px;
       background: linear-gradient(135deg, rgba(210,180,140,.9), rgba(184,146,106,.55));
       box-shadow: 0 10px 30px rgba(0,0,0,.35);
@@ -153,17 +155,17 @@
     /* Hero */
     .hero{
       display:grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap: 18px;
+      grid-template-columns: minmax(0, 1.15fr) minmax(290px, .75fr);
+      gap: 28px;
       align-items: stretch;
-      margin-bottom: 18px;
+      margin-bottom: 28px;
     }
     @media (max-width: 900px){
       .hero{ grid-template-columns: 1fr; }
     }
 
     .card{
-      border: 1px solid var(--stroke);
+      border: 1px solid rgba(210,180,140,.46);
       background: var(--glass);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
@@ -172,6 +174,18 @@
       overflow:hidden;
     }
     .card.pad{ padding: 22px; }
+    .hero-main{ max-width: 760px; }
+    .hero-side{
+      max-width: 390px;
+      width: 100%;
+      margin-left: auto;
+    }
+    @media (max-width: 900px){
+      .hero-main,
+      .hero-side{
+        max-width: none;
+      }
+    }
 
     .eyebrow{
       display:inline-flex;
@@ -184,7 +198,8 @@
       margin-bottom: 12px;
     }
     .dot{
-      width: 8px; height: 8px;
+      width: 8px;
+      height: 8px;
       border-radius: 50%;
       background: rgba(210,180,140,.95);
       box-shadow: 0 0 0 6px rgba(210,180,140,.14);
@@ -235,6 +250,11 @@
     }
 
     /* Names grid */
+    #names{
+      max-width: 980px;
+      margin-left: auto;
+      margin-right: auto;
+    }
     .names{
       margin-top: 18px;
       display:grid;
@@ -301,6 +321,12 @@
       background: linear-gradient(90deg, transparent, rgba(231,215,193,.18), transparent);
       margin: 18px 0;
     }
+    .premium-list{
+      margin: 0;
+      padding-left: 20px;
+      line-height: 1.65;
+    }
+    .premium-list li + li{ margin-top: 2px; }
 
     /* Footer */
     footer{
@@ -369,7 +395,7 @@
     </header>
 
     <section class="hero">
-      <div class="card pad">
+      <div class="card pad hero-main">
         <div class="eyebrow"><span class="dot"></span>Premium AI.com name ideas</div>
         <h1>Clean. Premium. Brandable.<br/>AI.com names that feel expensive.</h1>
         <p class="sub">
@@ -386,57 +412,59 @@
 
         <div class="statbox">
           <div class="stat">
-            <b id="countStat">—</b>
+            <b id="countStat">-</b>
             <span>Total names displayed</span>
           </div>
           <div class="stat">
-            <b>Tan + Lava</b>
-            <span>Luxury contrast for quick trust</span>
+            <b>Ownable/Owning/Provable</b>
+            <span>Positioning language for premium name fit</span>
           </div>
         </div>
       </div>
 
-      <div class="card pad">
-        <div class="eyebrow"><span class="dot"></span>Quick actions</div>
+      <div class="card pad hero-side">
+        <div class="eyebrow"><span class="dot"></span>Ai.com</div>
         <p class="sub" style="margin-top:0">
-          Use this box for your “next step” (DM, email, waitlist, buy, reserve).
+          contact@landedclean.com for further details.
         </p>
 
-        <!-- Replace this CTA with whatever you want -->
-        <a class="btn primary" style="display:inline-flex; width:100%; justify-content:center;" href="mailto:hello@landedclean.com?subject=AI.com%20Name%20Inquiry">
+        <a class="btn primary" style="display:inline-flex; width:100%; justify-content:center;" href="mailto:contact@landedclean.com?subject=AI.com%20Name%20Inquiry">
           Contact about a name
         </a>
 
         <div class="divider"></div>
 
-        <p class="muted" style="margin:0; line-height:1.6">
+        <p class="muted" style="margin:0 0 8px; line-height:1.6">
           Want this to feel even more premium? Add:
-          <br/>• 3 “Top Picks” pinned at the top
-          <br/>• a short “What I’m looking for” blurb
-          <br/>• availability status tags
         </p>
+        <ul class="premium-list muted">
+          <li>3 "Top Picks" pinned at the top</li>
+          <li>a short "What I'm looking for" blurb</li>
+          <li>availability status tags</li>
+          <li>Ownable/Owning/Provable</li>
+        </ul>
       </div>
     </section>
 
     <section class="card pad" id="names">
       <div class="eyebrow"><span class="dot"></span>Your AI.com name list</div>
       <p class="sub" style="margin-top:0">
-        Tap “Copy” on any name. Replace the list in the code with your real names.
+        Tap "Copy" on any name. Replace the list in the code with your real names.
       </p>
 
       <div class="names" id="namesGrid"></div>
     </section>
 
     <footer>
-      <span>© <span id="year"></span> LandedClean</span>
-      <span class="muted">Background: lava video • Palette: tan</span>
+      <span>&copy; <span id="year"></span> LandedClean</span>
+      <span class="muted">Background: lava video | Palette: tan</span>
     </footer>
   </div>
 
   <div class="toast" id="toast">Copied</div>
 
   <script>
-    // ✅ EDIT YOUR AI.COM NAME IDEAS HERE:
+    // Edit your AI.com name ideas here:
     const names = [
       "NovaAI.com",
       "LumenAI.com",
@@ -462,20 +490,20 @@
     const toast = document.getElementById("toast");
     const countStat = document.getElementById("countStat");
 
-    function showToast(text="Copied"){
+    function showToast(text = "Copied"){
       toast.textContent = text;
       toast.classList.add("show");
       clearTimeout(showToast._t);
-      showToast._t = setTimeout(()=>toast.classList.remove("show"), 900);
+      showToast._t = setTimeout(() => toast.classList.remove("show"), 900);
     }
 
     function copyText(text){
-      navigator.clipboard.writeText(text).then(()=>showToast("Copied")).catch(()=>showToast("Copy failed"));
+      navigator.clipboard.writeText(text).then(() => showToast("Copied")).catch(() => showToast("Copy failed"));
     }
 
     function render(list){
       grid.innerHTML = "";
-      list.forEach(n => {
+      list.forEach((n) => {
         const item = document.createElement("div");
         item.className = "name-card";
 
@@ -502,16 +530,16 @@
       const set = new Set();
       const out = [];
 
-      topPicks.forEach(n => { if(!set.has(n)){ set.add(n); out.push(n); } });
-      names.forEach(n => { if(!set.has(n)){ set.add(n); out.push(n); } });
+      topPicks.forEach((n) => { if(!set.has(n)){ set.add(n); out.push(n); } });
+      names.forEach((n) => { if(!set.has(n)){ set.add(n); out.push(n); } });
 
       return out;
     }
 
     function shuffle(array){
       const a = array.slice();
-      for(let i=a.length-1; i>0; i--){
-        const j = Math.floor(Math.random()*(i+1));
+      for(let i = a.length - 1; i > 0; i--){
+        const j = Math.floor(Math.random() * (i + 1));
         [a[i], a[j]] = [a[j], a[i]];
       }
       return a;
@@ -519,8 +547,8 @@
 
     document.getElementById("shuffleBtn").addEventListener("click", () => {
       const base = mergedList();
-      const tops = base.filter(x => topPicks.includes(x));
-      const rest = base.filter(x => !topPicks.includes(x));
+      const tops = base.filter((x) => topPicks.includes(x));
+      const rest = base.filter((x) => !topPicks.includes(x));
       render(tops.concat(shuffle(rest)));
     });
 
@@ -532,7 +560,7 @@
 
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // initial render
+    // Initial render
     render(mergedList());
   </script>
 </body>
