@@ -83,7 +83,13 @@
     .wrap {
       max-width: 1180px;
       margin: 0 auto;
-      padding: 26px 20px 70px;
+      padding: 120px 20px 70px;
+    }
+
+    @media (max-width: 768px) {
+      .wrap {
+        padding: 60px 20px 70px;
+      }
     }
 
     /* Header */
@@ -177,16 +183,50 @@
 
     /* Hero */
     .hero {
-      display: grid;
-      grid-template-columns: minmax(0, 1.15fr) minmax(290px, .75fr);
-      gap: 28px;
-      align-items: stretch;
-      margin-bottom: 28px;
+      text-align: center;
+      margin-bottom: 80px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    @media (max-width: 900px) {
-      .hero {
-        grid-template-columns: 1fr;
+    .hero-title {
+      font-size: 56px;
+      font-weight: 650;
+      margin: 0 0 32px;
+      letter-spacing: -1.2px;
+      line-height: 1;
+    }
+
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 42px;
+      }
+    }
+
+    .availability-tags {
+      margin: 0 0 60px;
+    }
+
+    .availability-tags ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: inline-block;
+      text-align: left;
+    }
+
+    .availability-tags li {
+      font-size: 28px;
+      font-weight: 500;
+      line-height: 1.4;
+      color: var(--tan-3);
+      margin: 8px 0;
+    }
+
+    @media (max-width: 768px) {
+      .availability-tags li {
+        font-size: 24px;
       }
     }
 
@@ -204,22 +244,12 @@
       padding: 22px;
     }
 
-    .hero-main {
-      max-width: 760px;
-    }
-
-    .hero-side {
-      max-width: 390px;
-      width: 100%;
-      margin-left: auto;
-    }
-
-    @media (max-width: 900px) {
-
-      .hero-main,
-      .hero-side {
-        max-width: none;
-      }
+    .section-label {
+      font-size: 16px;
+      font-weight: 400;
+      color: rgba(246, 239, 228, .68);
+      margin-bottom: 32px;
+      letter-spacing: 0.3px;
     }
 
     .eyebrow {
@@ -230,7 +260,7 @@
       color: rgba(246, 239, 228, .78);
       letter-spacing: .45px;
       text-transform: uppercase;
-      margin-bottom: 12px;
+      margin-bottom: 16px;
     }
 
     .dot {
@@ -296,6 +326,25 @@
       max-width: 980px;
       margin-left: auto;
       margin-right: auto;
+      margin-bottom: 40px;
+    }
+
+    .names-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .contact-section {
+      max-width: 500px;
+      margin: 60px auto 0;
+      text-align: center;
+      padding: 28px;
+      border: 1px solid rgba(210, 180, 140, .46);
+      background: var(--glass);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
     }
 
     .names {
@@ -452,68 +501,50 @@
       </a>
 
       <div class="top-cta">
-        <button class="btn" id="copyAllBtn">Copy all</button>
-        <a class="btn primary" href="#names">View names</a>
+        <a class="btn" href="#names">View names</a>
       </div>
     </header>
 
     <section class="hero">
-      <div class="card pad hero-main">
-        <div class="eyebrow"><span class="dot"></span>Premium AI.com name ideas</div>
-        <h1>Clean. Premium. Brandable.<br />AI.com names that feel expensive.</h1>
-        <p class="sub">
-          A simple landing page that showcases your best AI.com brand ideas with a polished look:
-          lava energy background + your tan palette + easy copy/share.
-        </p>
+      <h1 class="hero-title">AI.COM</h1>
 
-        <div class="hero-actions">
-          <a class="btn primary" href="#names">Browse name list</a>
-          <button class="btn" id="shuffleBtn">Shuffle</button>
-        </div>
-
-        <div class="divider"></div>
-
-        <div class="statbox">
-          <div class="stat">
-            <b id="countStat">-</b>
-            <span>Total names displayed</span>
-          </div>
-          <div class="stat">
-            <b>Ownable/Owning/Provable</b>
-            <span>Positioning language for premium name fit</span>
-          </div>
-        </div>
+      <div class="availability-tags">
+        <ul>
+          <li>• Ownable</li>
+          <li>• Owning</li>
+          <li>• Provable</li>
+        </ul>
       </div>
 
-      <div class="card pad hero-side">
-        <div class="eyebrow"><span class="dot"></span>Ai.com</div>
-        <p class="muted" style="margin:8px 0 0; font-size:13px; line-height:1.5">
-          Available tags:<br />
-          • Ownable<br />
-          • Owning<br />
-          • Provable
-        </p>
+      <div class="section-label">Premium AI.com name ideas</div>
 
-        <div class="divider"></div>
-
-        <p class="sub" style="margin:0 0 12px">
-          contact@landedclean.com for further details.
-        </p>
-
-        <a class="btn primary" style="display:inline-flex; width:100%; justify-content:center;"
-          href="mailto:contact@landedclean.com?subject=AI.com%20Name%20Inquiry">
-          Contact about a name
-        </a>
+      <div class="hero-actions">
+        <a class="btn primary" href="#names">Browse name list</a>
+        <button class="btn" id="shuffleBtn">Shuffle</button>
+        <button class="btn" id="copyAllBtn">Copy all</button>
       </div>
     </section>
 
     <section class="card pad" id="names">
-      <div class="eyebrow"><span class="dot"></span>Your AI.com name list</div>
-      <p class="sub" style="margin-top:0">
-        Tap "Copy" on any name. Replace the list in the code with your real names.
-      </p>
+      <div class="names-header">
+        <div class="eyebrow"><span class="dot"></span>Available names</div>
+        <p class="sub" style="margin:8px 0 0">
+          <span id="countStat">-</span> premium AI.com domains
+        </p>
+      </div>
 
       <div class="names" id="namesGrid"></div>
+    </section>
+
+    <section class="contact-section">
+      <div class="eyebrow"><span class="dot"></span>Get in touch</div>
+      <p class="sub" style="margin:8px 0 16px">
+        contact@landedclean.com for further details.
+      </p>
+      <a class="btn primary" style="display:inline-flex; width:100%; justify-content:center;"
+        href="mailto:contact@landedclean.com?subject=AI.com%20Name%20Inquiry">
+        Contact about a name
+      </a>
     </section>
 
     <footer>
