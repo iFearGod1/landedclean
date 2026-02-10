@@ -4,10 +4,26 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Premium AI.com Domains Available | LandedClean</title>
+  <title>AI.COM — Domains for Sale | LandedClean</title>
   <meta name="description"
     content="Premium AI.com domain names available for acquisition. Lawfully acquired digital assets with escrow-only transfers for secure transactions. Contact for availability." />
   <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://landedclean.com/" />
+  <meta property="og:title" content="AI.COM — Domains for Sale" />
+  <meta property="og:description"
+    content="Private AI.com domain portfolio. Escrow-only transfers. Inquire via contact@landedclean.com." />
+  <meta property="og:image" content="https://landedclean.com/og/ai-com-preview.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AI.COM — Domains for Sale" />
+  <meta name="twitter:description" content="Private AI.com domain portfolio. Escrow-only transfers." />
+  <meta name="twitter:image" content="https://landedclean.com/og/ai-com-preview.png" />
 
   <style>
     :root {
@@ -85,12 +101,12 @@
     .wrap {
       max-width: 1180px;
       margin: 0 auto;
-      padding: 120px 20px 70px;
+      padding: 120px max(20px, env(safe-area-inset-right)) 70px max(20px, env(safe-area-inset-left));
     }
 
     @media (max-width: 768px) {
       .wrap {
-        padding: 60px 20px 70px;
+        padding: 60px max(16px, env(safe-area-inset-right)) 70px max(16px, env(safe-area-inset-left));
       }
     }
 
@@ -149,6 +165,8 @@
       align-items: center;
       flex-wrap: wrap;
       justify-content: flex-end;
+      position: relative;
+      z-index: 100;
     }
 
     .btn {
@@ -451,6 +469,10 @@
       color: rgba(246, 239, 228, .88);
       font-size: 15px;
       line-height: 1.7;
+      max-width: 720px;
+      margin: 0 auto;
+      overflow-wrap: anywhere;
+      word-break: break-word;
     }
 
     .readme h2 {
@@ -526,6 +548,58 @@
 
       .readme h3 {
         font-size: 17px;
+      }
+    }
+
+    /* Mobile-specific optimizations for iPhone */
+    @media (max-width: 480px) {
+      .hero-title {
+        font-size: clamp(40px, 12vw, 64px) !important;
+        line-height: 0.95 !important;
+      }
+
+      .availability-tags {
+        font-size: 24px;
+      }
+
+      .section-label {
+        font-size: 14px !important;
+        line-height: 1.5 !important;
+        max-width: 90% !important;
+      }
+
+      .top-cta {
+        gap: 8px;
+        justify-content: center;
+        width: 100%;
+      }
+
+      .top-cta .btn {
+        flex: 1;
+        min-width: 140px;
+      }
+
+      header {
+        flex-direction: column;
+        gap: 16px;
+        align-items: flex-start;
+      }
+
+      .readme {
+        padding: 0 4px;
+      }
+
+      .readme h2 {
+        font-size: 20px;
+      }
+
+      .readme h3 {
+        font-size: 16px;
+      }
+
+      .readme p,
+      .readme ul {
+        font-size: 14px;
       }
     }
 
